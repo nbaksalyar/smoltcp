@@ -25,6 +25,12 @@ impl fmt::Display for Handle {
     }
 }
 
+impl From<usize> for Handle {
+    fn from(val: usize) -> Handle {
+	Handle(val)
+    }
+}
+
 impl Handle {
     /// Return a numeric value of the handle.
     pub fn inner(&self) -> usize {
